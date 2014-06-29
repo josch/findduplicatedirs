@@ -1,10 +1,12 @@
 Description
 -----------
 
-Give a directory, find all directories of which two or more duplicates exist.
+Give a directory, find all transitive subdirectories of which two or more
+duplicates exist.
 
-A directory is considered a duplicate if its sha256 checksum is equal. A
-directory's sha256 checksum is calculated from the concatenation of:
+Two directories are considered a duplicate of each other if their sha256
+checksums are equal. A directory's sha256 checksum is calculated from the
+concatenation of the following content of the directory:
 
  - all file names
  - all file contents
